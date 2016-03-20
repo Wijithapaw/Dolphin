@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201603191449179_RenamedAdminAsDonor.Designer.cs">
       <DependentUpon>201603191449179_RenamedAdminAsDonor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603200814192_ElmahDBChanges.cs" />
+    <Compile Include="Migrations\201603200814192_ElmahDBChanges.Designer.cs">
+      <DependentUpon>201603200814192_ElmahDBChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603191449179_RenamedAdminAsDonor.resx">
       <DependentUpon>201603191449179_RenamedAdminAsDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603200814192_ElmahDBChanges.resx">
+      <DependentUpon>201603200814192_ElmahDBChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

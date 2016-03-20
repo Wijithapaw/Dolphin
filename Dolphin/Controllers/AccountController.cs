@@ -184,13 +184,13 @@ namespace Dolphin.Controllers
         [Authorize(Roles = "Administrator")]
         public ActionResult NewDonor()
         {
-            return View();
+            return View("EditDonor");
         }
 
         [Route("account/create/donor")]
         [Authorize(Roles = "Administrator")]
         [HttpPost]
-        public async Task<ActionResult> NewDonor(DonorViewModel model)
+        public async Task<ActionResult> NewDonor(Donor model)
         {
             if (ModelState.IsValid)
             {
