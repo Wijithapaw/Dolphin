@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home"  visibility="false"  action="Index">
+    <mvcSiteMapNode title="Admin" clickable="false" roles="Administrator">
+      <mvcSiteMapNode title="Manage Donors" controller="Donor" action="Index" area="AdminArea">
+        <mvcSiteMapNode title="New Donor" area="" action="NewDonor" controller="Account" visibility="SiteMapPathHelper,!*" />
+        <mvcSiteMapNode title="Edit Donor" area="" action="EditDonor"  controller="Account" preservedRouteParameters="id"  visibility="SiteMapPathHelper,!*" >
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Contact" action="Contact" controller="Home" visibility="SiteMapPathHelper,!*" />
+      <mvcSiteMapNode title="About" area="" action="About" controller="Home" visibility="SiteMapPathHelper,!*" />
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Manage Account" controller="Manage" action="Index" visibility="SiteMapPathHelper,!*">
+      <mvcSiteMapNode title="Change Password" action="ChangePassword" />
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>

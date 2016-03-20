@@ -1,0 +1,17 @@
+﻿@using Dolphin.Utills
+
+@{
+    var message = TempData["Message"] as Message;
+    if (message != null)
+    {
+        string messageType = message.Type == MessageType.Success ? "alert-success"
+                            : message.Type == MessageType.Warning ? "alert-warning"
+                            : message.Type == MessageType.Error ? "alert-error"
+                            : message.Type == MessageType.Other ? "alert-info" : "alert-info";
+
+        <div class="alert @messageType">
+            <button type="button" class="close" data-dismiss="alert"><i class="fa fa-times"></i></button>
+            <strong>@message.Title</strong> @message.Text
+        </div>
+    }
+}
